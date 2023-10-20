@@ -1,0 +1,178 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ECECEC;
+  color: #333;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: lightgray;
+}
+.section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* Styles for individual sections */
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Cutive Mono', monospace;
+}
+
+#about h1, #portfolio h1 {
+  text-align: center; /* Center the h1 in both sections */
+}
+
+.project {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Cutive Mono', monospace;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto; /* Center the project boxes using the same method as the bio box */
+  margin-bottom: 20px;
+}
+
+/* Apply even spacing to the bio paragraphs and set the same font */
+#about p, #portfolio p, #contact p, .project p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Style the bio box and project box */
+.bio-box, .project {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Center the h2 within the project box */
+.project h2 {
+  text-align: center;
+}
+
+/* Add space between the ul and "How It Works" */
+.project ul {
+  margin-bottom: 20px;
+}
+
+/* Your existing CSS styles... */
+
+/* Styles for the accordion */
+.accordion {
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.3s;
+  border-top: 1px solid #ccc; /* Add a top border to separate accordions */
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Highlight the button when hovered over */
+.accordion:hover {
+  background-color: #ddd;
+}
+
+/* Style the button that is active (open) */
+.active, .accordion.active {
+  background-color: #ccc;
+}
+
+/* Adjust panel display when active */
+.active + .panel {
+  max-height: 200px; /* Adjust the maximum height as needed */
+}
+
+/* Your existing CSS styles... */
+
+/* Styles for the footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the accordion content boxes */
+.box {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0; /* Remove margin to make it touch the accordion button */
+}
+
+.box ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.box p {
+  margin: 10px 0;
+}
