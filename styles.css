@@ -94,8 +94,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Your existing CSS styles... */
-
 /* Styles for the accordion */
 .accordion {
   background-color: #f0f0f0;
@@ -130,8 +128,6 @@ h1 {
 .active + .panel {
   max-height: 200px; /* Adjust the maximum height as needed */
 }
-
-/* Your existing CSS styles... */
 
 /* Styles for the footer */
 footer {
