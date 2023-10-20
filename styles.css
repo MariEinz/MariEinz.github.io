@@ -70,7 +70,7 @@ h1 {
 #about p, #portfolio p, #contact p, .project p {
   line-height: 1.6;
   margin-bottom: 20px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Cutive Mono', monospace;
 }
 
 /* Style the bio box and project box */
