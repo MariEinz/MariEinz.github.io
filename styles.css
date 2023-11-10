@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global styles */
 body {
   font-family: 'Cutive Mono', monospace;
@@ -37,6 +41,7 @@ nav ul li {
 nav ul li a {
   color: lightgray;
 }
+
 .section {
   padding: 40px;
   text-align: center;
@@ -49,8 +54,10 @@ h1 {
   font-family: 'Cutive Mono', monospace;
 }
 
-#about h1, #portfolio h1 {
-  text-align: center; /* Center the h1 in both sections */
+#about h1,
+#portfolio h1 {
+  text-align: center;
+  /* Center the h1 in both sections */
 }
 
 .project {
@@ -62,19 +69,24 @@ h1 {
   font-family: 'Cutive Mono', monospace;
   color: #333;
   max-width: 800px;
-  margin: 0 auto; /* Center the project boxes using the same method as the bio box */
+  margin: 0 auto;
+  /* Center the project boxes using the same method as the bio box */
   margin-bottom: 20px;
 }
 
 /* Apply even spacing to the bio paragraphs and set the same font */
-#about p, #portfolio p, #contact p, .project p {
+#about p,
+#portfolio p,
+#contact p,
+.project p {
   line-height: 1.6;
   margin-bottom: 20px;
   font-family: 'Cutive Mono', monospace;
 }
 
 /* Style the bio box and project box */
-.bio-box, .project {
+.bio-box,
+.project {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -105,7 +117,8 @@ h1 {
   text-align: left;
   outline: none;
   transition: background-color 0.3s;
-  border-top: 1px solid #ccc; /* Add a top border to separate accordions */
+  border-top: 1px solid #ccc;
+  /* Add a top border to separate accordions */
 }
 
 .panel {
@@ -120,13 +133,15 @@ h1 {
 }
 
 /* Style the button that is active (open) */
-.active, .accordion.active {
+.active,
+.accordion.active {
   background-color: #ccc;
 }
 
 /* Adjust panel display when active */
-.active + .panel {
-  max-height: 200px; /* Adjust the maximum height as needed */
+.active+.panel {
+  max-height: 200px;
+  /* Adjust the maximum height as needed */
 }
 
 /* Styles for the footer */
@@ -161,7 +176,8 @@ footer {
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
-  margin: 0; /* Remove margin to make it touch the accordion button */
+  margin: 0;
+  /* Remove margin to make it touch the accordion button */
 }
 
 .box ul {
