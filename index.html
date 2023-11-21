@@ -11,72 +11,35 @@
 <body>
     <header>
         <nav>
-            <div class="logo">MariEinz</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-            </ul>
+            <h1>MariEinz</h1>
+
         </nav>
     </header>
-
-    <section id="about" class="section">
-        <div class="bio-box">
-            <h1>About Me</h1>
-            <p>Hello, I'm MariEinz, a creative explorer at the intersection of audio engineering and computer
-                science.</p>
-            <p>Armed with a degree in audio engineering, I've spent years crafting captivating soundscapes, mastering
-                the art of music production, and diving deep into audio technology. I've fine-tuned my skills in
-                audio software, honing my craft in sound manipulation and storytelling through music.</p>
-            <p>But my journey doesn't end there. With a relentless curiosity, I've decided to venture into the world of
-                computer science. This shift represents my dedication to leveraging technology's potential to create
-                innovative audio solutions. My focus is on mastering algorithms, coding languages, and software
-                development to bridge creativity with technology seamlessly.</p>
-            <p>In my free time, I love experimenting with audio effects, coding software tools, and blending the
-                boundaries of audio and computer science. I see this dual-degree journey as a pathway to driving the
-                future of audio technology, pioneering immersive auditory experiences.</p>
+    <section>
+        <div class="grid">
+            <div class="box">
+                <h1>About Me</h1>
+                <p>Hello, I'm MariEinz, a creative explorer at the intersection of audio engineering and computer
+                    science.</p>
+                <p>Armed with a degree in audio engineering, I've spent years crafting captivating soundscapes,
+                    mastering
+                    the art of music production, and diving deep into audio technology. I've fine-tuned my skills in
+                    audio software, honing my craft in sound manipulation and storytelling through music.</p>
+                <p>But my journey doesn't end there. With a relentless curiosity, I've decided to venture into the world
+                    of
+                    computer science. This shift represents my dedication to leveraging technology's potential to create
+                    innovative audio solutions. My focus is on mastering algorithms, coding languages, and software
+                    development to bridge creativity with technology seamlessly.</p>
+                <p>In my free time, I love experimenting with audio effects, coding software tools, and blending the
+                    boundaries of audio and computer science. I see this dual-degree journey as a pathway to driving the
+                    future of audio technology, pioneering immersive auditory experiences.</p>
+            </div>
+        </div>
         </div>
     </section>
-
-    <section id="portfolio" class="section">
-        <h1>Portfolio</h1>
-        <!-- ... Your existing code ... -->
-        <div class="project">
-            <h2>Light-Based Theremin</h2>
-            <p>In this innovative project, I designed a light-based theremin, a musical instrument that's played without
-                physical touch. The theremin's unique feature is that it relies on the movement of light and shadows to
-                create musical tones.</p>
-                <button class="accordion">Key Components</button>
-                <div class="panel">
-                    <div class="box">
-                            <p><strong>Raspberry Pi:</strong> The Raspberry Pi served as the brain of the project, controlling the input and output of audio signals.</p>
-                            <p><strong>Python:</strong> I wrote a Python script to interface with light sensors and process the data they captured. The script used OpenCV to detect changes in light intensity, and then converted these changes into control signals for audio synthesis.</p>
-                            <p><strong>Max/MSP:</strong> Max/MSP, a visual programming language for music and multimedia, was used to generate and manipulate the audio output. It translated the control signals from Python into audible sound, allowing for real-time audio synthesis.</p>
-                    </div>
-                </div>
-            
-                <button class="accordion">How It Works</button>
-                <div class="panel">
-                    <div class="box">
-                        <p>The light-based theremin operates by utilizing photoresistors or other light-sensitive components. As a hand or an object moves closer to or farther away from the sensors, it affects the amount of light detected. The Python script continuously monitors these changes and translates them into MIDI or control voltage (CV) data.</p>
-                        <p>This data is then sent to Max/MSP, which interprets it to produce varying musical tones. As the user's hand moves through the air, blocking and revealing light sources, the theremin generates a unique and dynamic musical performance, akin to the traditional theremin but with a light-based twist.</p>
-                    </div>
-                </div>
-            
-                <button class="accordion">Challenges and Creativity</button>
-                <div class="panel">
-                    <div class="box">
-                        <p>The project posed numerous challenges, including calibrating the light sensors, mapping light intensity to musical parameters, and achieving a responsive and expressive performance. Overcoming these challenges required a deep understanding of both hardware and software, as well as a creative approach to bridging the worlds of light, technology, and music.</p>
-                        <p>This light-based theremin project represents a fusion of art and technology, pushing the boundaries of traditional music instruments. It's a testament to the limitless possibilities that emerge when innovative technology meets the creative spirit, producing a truly unique and mesmerizing musical experience.</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <script src="accordion.js"></script>
 </body>
 <footer>
-    <div class="footer-content">
-        <p>&copy; 2023 MariEinz</p>
-    </div>
+    <p>&copy; 2023 MariEinz</p>
 </footer>
 
 </html>

@@ -1,190 +1,202 @@
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
-/* Global styles */
-body {
-  font-family: 'Cutive Mono', monospace;
-  background-color: #ECECEC;
-  color: #333;
-}
-
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.logo {
-  font-size: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-nav ul {
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
-nav ul li a {
-  color: lightgray;
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-.section {
-  padding: 40px;
-  text-align: center;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-/* Styles for individual sections */
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  font-family: 'Cutive Mono', monospace;
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-#about h1,
-#portfolio h1 {
-  text-align: center;
-  /* Center the h1 in both sections */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-.project {
-  margin: 20px 0;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-family: 'Cutive Mono', monospace;
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.23;
   color: #333;
-  max-width: 800px;
-  margin: 0 auto;
-  /* Center the project boxes using the same method as the bio box */
-  margin-bottom: 20px;
-}
-
-/* Apply even spacing to the bio paragraphs and set the same font */
-#about p,
-#portfolio p,
-#contact p,
-.project p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-family: 'Cutive Mono', monospace;
-}
-
-/* Style the bio box and project box */
-.bio-box,
-.project {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 40px;
-  text-align: left;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-/* Center the h2 within the project box */
-.project h2 {
-  text-align: center;
+/* root */
+
+:root {
+  --clr-primary-900: #333;
+  --clr-primary-800: #cbcbcb;
+
+  --clr-accent-100: hsl(208, 100%, 97%);
+
+
+  --fw-normal: 400;
+  --fw-bold: 700;
+
+  --fs-300: 0.75rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+
+
+  --nav-primary: var(--clr-primary-900);
+  --nav-accent: var(--clr-accent-100);
 }
 
-/* Add space between the ul and "How It Works" */
-.project ul {
-  margin-bottom: 20px;
-}
 
-/* Styles for the accordion */
-.accordion {
-  background-color: #f0f0f0;
-  color: #333;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: background-color 0.3s;
-  border-top: 1px solid #ccc;
-  /* Add a top border to separate accordions */
-}
+/* header */
 
-.panel {
-  max-height: 0;
+header {
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  background-color: var(--nav-primary);
+  color: var(--nav-accent);
+  padding: 1rem 0.5rem;
 }
 
-/* Highlight the button when hovered over */
-.accordion:hover {
-  background-color: #ddd;
+header nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Style the button that is active (open) */
-.active,
-.accordion.active {
-  background-color: #ccc;
+
+header h1,
+header li {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
 }
 
-/* Adjust panel display when active */
-.active+.panel {
-  max-height: 200px;
-  /* Adjust the maximum height as needed */
-}
-
-/* Styles for the footer */
-footer {
-  background-color: #222;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 14px;
-}
-
-.footer-content p {
-  margin: 5px 0;
-}
-
-.footer-content a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-content a:hover {
-  text-decoration: underline;
-}
-
-/* Styles for the accordion content boxes */
-.box {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
+header ul {
+  list-style: none;
   margin: 0;
-  /* Remove margin to make it touch the accordion button */
+  padding: 0;
 }
 
-.box ul {
-  list-style-type: disc;
-  margin-left: 20px;
+header ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
 }
 
-.box p {
-  margin: 10px 0;
+header a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* main */
+
+.grid {
+  display: grid;
+  grid-template-columns: 20% [content] 60% [content] 20%;
+  margin: 2rem 0;
+}
+
+.grid h1 {
+  grid-column: content;
+  text-align: center;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  padding: 1rem 0;
+
+}
+
+.grid p {
+  grid-column: content;
+  padding: 0.5rem;
+  font-size: var(--fs-500);
+}
+
+.grid .box {
+  grid-column: content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--clr-primary-800);
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--nav-primary);
+  color: var(--nav-accent);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  min-height: 3rem;
+}
+
+footer p {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-normal);
+  padding: 1rem 0;
+}
+
+body {
+  background-image: url(images/hero.jpg);
 }
