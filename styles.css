@@ -147,6 +147,13 @@ header a {
 }
 
 /* main */
+.main-layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 
 .grid {
   display: grid;
@@ -183,9 +190,9 @@ header a {
 footer {
   background-color: var(--nav-primary);
   color: var(--nav-accent);
-  position: fixed;
+  /*   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   width: 100%;
   text-align: center;
   min-height: 3rem;
